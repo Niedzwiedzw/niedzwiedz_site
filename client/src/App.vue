@@ -7,24 +7,25 @@
 
     <p>Links you might be interested in:</p>
     <ul id="useful-links">
+      <span></span>
       <li>
         <a href="https://www.youtube.com/channel/UCPrQ6QT_-k0YpgJclL1ks4w">
-          YouTube <i class="fab fa-youtube"></i>
+          <i class="fab fa-lg fa-youtube"></i>
         </a>
       </li>
       <li>
         <a href="https://www.facebook.com/niedzwiedzw/">
-          Facebook <i class="fab fa-facebook-square"></i>
+          <i class="fab fa-lg fa-facebook-square"></i>
         </a>
       </li>
       <li>
         <a href="https://www.instagram.com/niedzwiedzwo/">
-           Instagram <i class="fab fa-instagram"></i>
+          <i class="fab fa-lg fa-instagram"></i>
         </a>
       </li>
       <li>
         <a href="https://open.spotify.com/artist/47DkO7js1AuBmqmRXCFA6l?si=2TLFj3EuTJiXR7gAguRP5g">
-          Spotify <i class="fab fa-spotify"></i>
+          <i class="fab fa-lg fa-spotify"></i>
         </a>
       </li>
     </ul>
@@ -87,10 +88,13 @@
 
   #useful-links{
     margin: 2rem;
-    line-height: 2rem;
+    line-height: 4rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto repeat(4, 100px) auto;
     li {
       a {
-        font-size: 1.7rem;
+        font-size: 3rem;
       }
     }
   }
