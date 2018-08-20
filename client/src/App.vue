@@ -6,30 +6,30 @@
 
 
     <p>Links you might be interested in:</p>
-    <ul id="useful-links">
-      <span></span>
-      <li>
-        <a href="https://www.youtube.com/channel/UCPrQ6QT_-k0YpgJclL1ks4w">
-          <i class="fab fa-lg fa-youtube"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.facebook.com/niedzwiedzw/">
-          <i class="fab fa-lg fa-facebook-square"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/niedzwiedzwo/">
-          <i class="fab fa-lg fa-instagram"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://open.spotify.com/artist/47DkO7js1AuBmqmRXCFA6l?si=2TLFj3EuTJiXR7gAguRP5g">
-          <i class="fab fa-lg fa-spotify"></i>
-        </a>
-      </li>
-    </ul>
-
+    <div id="links-container">
+      <ul id="useful-links">
+        <li>
+          <a href="https://www.youtube.com/channel/UCPrQ6QT_-k0YpgJclL1ks4w">
+            <i class="fab fa-lg fa-youtube"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/niedzwiedzw/">
+            <i class="fab fa-lg fa-facebook-square"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/niedzwiedzwo/">
+            <i class="fab fa-lg fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://open.spotify.com/artist/47DkO7js1AuBmqmRXCFA6l?si=2TLFj3EuTJiXR7gAguRP5g">
+            <i class="fab fa-lg fa-spotify"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
 
     <div id="media-container">
 
@@ -66,6 +66,7 @@
 </script>
 
 <style lang="scss">
+
   #media-container{
     max-width: 480px;
     margin-left: auto;
@@ -86,12 +87,17 @@
     transition: all 0.3s;
   }
 
-  #useful-links{
-    margin: 2rem;
-    line-height: 4rem;
+  #links-container {
     display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: auto repeat(4, 100px) auto;
+    grid-template-columns: 1fr 290px 1fr; /*why the fuck does it work?*/
+  }
+
+  #useful-links {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: repeat(2, 100px);
     li {
       a {
         font-size: 3rem;
